@@ -17,14 +17,17 @@ Following are stories about how we envision OpenMeet being used.
 ### The Local Artist Community
 
 Sarah, a watercolor artist, wanted to connect with other artists in her neighborhood but found existing platforms too commercial or impersonal. Using OpenMeet, she created a "Portland Urban Sketchers" group. The platform helped her:
+
 - Organize weekly sketching meetups in different city locations
 - Share upcoming events with local art enthusiasts
 - Build a supportive community of 30+ artists who now regularly meet, share techniques, and collaborate on local exhibitions
 - Keep the focus on genuine connections rather than commercial interests
 
 ### The Tech for Good Initiative
+
 Marcus, a software developer, was passionate about using technology to solve local community problems. Through OpenMeet, he:
-- Started a "Tech for Good Chicago" group
+
+- Started a "Louisville Tech for Good" group
 - Connected with other socially conscious developers, designers, and community organizers
 - Organized monthly hackathons focusing on local non-profit needs
 - Built a network of 50+ tech professionals who now regularly contribute to community projects
