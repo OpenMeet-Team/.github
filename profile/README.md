@@ -40,3 +40,4 @@ We welcome contributions to OpenMeet! We don't have a formal process yet, but su
 ## Contact
 * support@openmeet.net
 * https://calendly.com/tom-openmeet/30min
+* [Join our Community in Zulip](https://github.com/OpenMeet-Team) while we build OpenMeet
