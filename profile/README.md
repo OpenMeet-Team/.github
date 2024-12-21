@@ -7,7 +7,7 @@ OpenMeet is an open-source replacement for Meetup.com, which has raised their pr
 * [platform.openmeet.net](https://platform.openmeet.net) - Our first version is out now.  Try it to create any type of group and event; we'd love to hear your feedback.
 * [FAQ](https://biz.openmeet.net/faq) - Answers to common questions about OpenMeet
 * [OpenMeet](https://openmeet.net) - About what we're doing
-* [Discord Server](https://discord.gg/Q6cxwrub)
+* [Discord Server](https://discord.gg/eQcYADgnrc)
 
 ## Mission
 
