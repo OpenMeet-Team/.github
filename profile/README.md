@@ -1,75 +1,95 @@
 # OpenMeet
 
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://github.com/OpenMeet-Team/openmeet-api/blob/main/LICENSE)
 [![Discord](https://img.shields.io/discord/1316964466889461760?color=5865F2&label=Discord&logo=discord&logoColor=white)](https://discord.gg/eQcYADgnrc)
 
-**A free, open-source event platform for community organizers.** Think Meetup, but free for communities and open source.
+**A free, open-source event platform for community organizers, built on the AT Protocol.** Think Meetup, but free for communities and open source.
 
 **Live now:** [platform.openmeet.net](https://platform.openmeet.net)
 
 ---
 
-## Why OpenMeet?
+## Where OpenMeet is going
 
-Meetup charges organizers $200+/year just to host community events. We believe tools for bringing people together should be freely available to everyone.
+OpenMeet is moving onto [atmo](https://github.com/flo-bit/atmo-events), the open-source AT Protocol events app behind [atmo.rsvp](https://atmo.rsvp).
 
-| What's Different | |
-|------------------|---|
-| **Free forever** | No organizer fees for groups of any size |
-| **Open source** | Run your own instance or use the [community instance](https://platform.openmeet.net) |
-| **AT Protocol native** | Sign in with your AT Protocol identity, own your data |
-| **No lock-in** | Export your data anytime, or self-host |
+In atmo, your events and RSVPs are records in your own AT Protocol account, on your PDS (personal data server). They are not locked in our database. Any AT Protocol app can read them, and you can take them with you. That is where we want OpenMeet to be.
+
+So we add what community organizers need to atmo itself, as pull requests to the upstream project. Each feature is then there for everyone who uses atmo, not only OpenMeet. Over time, atmo becomes the base that OpenMeet runs on.
+
+**Added to atmo so far:**
+
+- Event search, and events near you
+- Events happening right now show up in what's on
+- Load more stays consistent with the first page
+- The event index and search stay up to date
+
+**Working on now: groups.** A group is its own AT Protocol account, with members, roles and members-only events. It follows the draft [opensocial.group](https://tangled.org/opensocial.group/proposal) standard and the atproto [permissioned data proposal](https://github.com/bluesky-social/proposals/tree/main/0016-permissioned-data) (atproto spaces). Both are still changing, so groups are not on atmo.rsvp yet. You can try them today on our demo network: [atmo.lighthouse.snowglobe.at](https://atmo.lighthouse.snowglobe.at).
+
+**If your group is on platform.openmeet.net,** nothing changes yet. The platform keeps running until groups work on atmo. We will post on Discord and Bluesky before anything moves.
+
+---
+
+## Snowglobe
+
+[Snowglobe](https://github.com/OpenMeet-Team/snowglobe) is your own isolated AT Protocol network, for testing and demos. Nothing in it reaches Bluesky's network. We use it to build atmo's groups, and [snowglobe.at](https://snowglobe.at) has the details.
 
 ---
 
 ## Repositories
 
-| Repository | Description | Stack |
-|------------|-------------|-------|
-| [openmeet-api](https://github.com/OpenMeet-Team/openmeet-api) | Backend API | NestJS, TypeScript, PostgreSQL |
-| [openmeet-platform](https://github.com/OpenMeet-Team/openmeet-platform) | Frontend web app | Vue 3, Quasar, TypeScript |
-| [survey](https://github.com/OpenMeet-Team/survey) | AT Protocol polling service | Go, Templ, HTMX |
+| Repository | What it is | Stack |
+|------------|------------|-------|
+| [snowglobe](https://github.com/OpenMeet-Team/snowglobe) | Your own isolated AT Protocol network, for testing and demos | Node, Docker Compose |
+| [openmeet-platform](https://github.com/OpenMeet-Team/openmeet-platform) | Web app for platform.openmeet.net | Vue 3, Quasar, TypeScript |
+| [openmeet-api](https://github.com/OpenMeet-Team/openmeet-api) | API for platform.openmeet.net | NestJS, TypeScript, PostgreSQL |
+
+openmeet-platform and openmeet-api keep running for existing groups and still get fixes. New features go into atmo.
+
+**Upstream projects we contribute to:**
+
+| Repository | What it is |
+|------------|------------|
+| [flo-bit/atmo-events](https://github.com/flo-bit/atmo-events) | atmo, the events app OpenMeet is moving onto |
+| [flo-bit/contrail](https://github.com/flo-bit/contrail) | The AT Protocol indexer that atmo runs on |
 
 ---
 
-## Features
+## What platform.openmeet.net does today
 
-- **Events** — One-time or recurring, with RSVP management and waitlists
-- **Groups** — Build communities around shared interests
-- **Real-time chat** — Matrix-powered group and event chat
-- **Multiple auth options** — Email, Google, GitHub, or AT Protocol
-- **AT Protocol integration** — Your events sync to your Personal Data Server
+- Events, one-time or recurring, with RSVPs and waitlists
+- Groups around shared interests
+- Group and event chat, powered by Matrix
+- Sign in with email, Google, GitHub or AT Protocol
+- Your events are also written to your AT Protocol account
 
----
-
-## Who Uses OpenMeet?
+## Who uses OpenMeet?
 
 300+ users across ~50 groups, including:
-- [Kona Freethinkers](https://platform.openmeet.net/groups/kona-freethinkers-hi7lb1) — Community discussion group
-- [Coast Riders Motorcycle Club](https://platform.openmeet.net/groups/coast-riders-motorcycle-club-roykjb) — Motorcycle club
+
+- [Kona Freethinkers](https://platform.openmeet.net/groups/kona-freethinkers-hi7lb1), a community discussion group
+- [Coast Riders Motorcycle Club](https://platform.openmeet.net/groups/coast-riders-motorcycle-club-roykjb), a motorcycle club
 - Book clubs, tech meetups, hobby groups, and more
 
 [Browse all groups →](https://platform.openmeet.net/groups)
 
 ---
 
-## Get Involved
+## Get involved
 
-OpenMeet is community-driven and we need help in many areas:
-
-| Area | How You Can Help |
+| Area | How you can help |
 |------|------------------|
-| **Use It** | [Create a group](https://platform.openmeet.net) — it's free |
-| **Marketing** | Spread the word, write blog posts, share on social media |
-| **Feature Ideas** | [Open an issue](https://github.com/OpenMeet-Team/openmeet-api/issues/new) with requests from your community's needs |
-| **Funding** | Help cover hosting (~$350/month) at [platform.openmeet.net/support](https://platform.openmeet.net/support) |
-| **Development** | Browse [good first issues](https://github.com/search?q=org%3AOpenMeet-Team+label%3A%22good+first+issue%22+is%3Aopen&type=issues) across all repos |
+| **Use it** | [Create a group](https://platform.openmeet.net), it's free. Or post an event on [atmo.rsvp](https://atmo.rsvp) with any AT Protocol account, such as Bluesky. |
+| **Try what's next** | Try groups on [the demo](https://atmo.lighthouse.snowglobe.at) and tell us what is missing |
+| **Feature ideas** | Tell us on [Discord](https://discord.gg/eQcYADgnrc) what your community needs |
+| **Spread the word** | Share OpenMeet, write about it, tell other organizers |
+| **Funding** | Help cover hosting (~$200/month) at [platform.openmeet.net/support](https://platform.openmeet.net/support) |
+| **Development** | Work on [snowglobe](https://github.com/OpenMeet-Team/snowglobe), or send pull requests to [atmo](https://github.com/flo-bit/atmo-events) |
 
 **Resources:**
-- [Roadmap](https://github.com/OpenMeet-Team/openmeet-api/blob/main/ROADMAP.md) — What's coming next
-- [Discord](https://discord.gg/eQcYADgnrc) — Chat with the community
-- [Bluesky](https://bsky.app/profile/openmeet.net) — Follow @openmeet.net
-- [FAQ](https://openmeet.net/faq) — Common questions
+
+- [Discord](https://discord.gg/eQcYADgnrc): chat with the community
+- [Bluesky](https://bsky.app/profile/openmeet.net): follow @openmeet.net
+- [FAQ](https://openmeet.net/faq): common questions
 
 ---
 
