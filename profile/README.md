@@ -23,7 +23,7 @@ So we add what community organizers need to atmo itself, as pull requests to the
 - Load more stays consistent with the first page
 - The event index and search stay up to date
 
-**Working on now: groups.** A group is its own AT Protocol account, with members, roles and members-only events. It follows the draft [opensocial.group](https://tangled.org/opensocial.group/proposal) standard and the permissioned spaces work in atproto. Both are still changing, so groups are not on atmo.rsvp yet. You can try them today on our demo network: [atmo.lighthouse.snowglobe.at](https://atmo.lighthouse.snowglobe.at).
+**Working on now: groups.** A group is its own AT Protocol account, with members, roles and members-only events. It follows the draft [opensocial.group](https://tangled.org/opensocial.group/proposal) standard and the atproto [permissioned data proposal](https://github.com/bluesky-social/proposals/tree/main/0016-permissioned-data) (atproto spaces). Both are still changing, so groups are not on atmo.rsvp yet. You can try them today on our demo network: [atmo.lighthouse.snowglobe.at](https://atmo.lighthouse.snowglobe.at).
 
 **If your group is on platform.openmeet.net,** nothing changes yet. The platform keeps running until groups work on atmo. We will post on Discord and Bluesky before anything moves.
 
@@ -31,18 +31,7 @@ So we add what community organizers need to atmo itself, as pull requests to the
 
 ## Snowglobe
 
-[Snowglobe](https://github.com/OpenMeet-Team/snowglobe) is your own isolated AT Protocol network, for testing, research and demos. It has its own PDS, PLC directory and Jetstream, and nothing in it reaches Bluesky's network. It uses https and the real sign-in (OAuth), so an app built for the real network runs on it with no test-only code.
-
-Some changes can hurt real users if they go wrong: a new lexicon, a new sign-in flow, an app that writes records in a new way. In a snowglobe, a mistake touches nobody. We use it to build atmo's groups.
-
-Run one on your machine:
-
-```bash
-npm install -g @openmeet/snowglobe
-snowglobe up --default
-```
-
-Or open the one we host, [lighthouse.snowglobe.at](https://lighthouse.snowglobe.at). It is a test network, so its accounts and data can be wiped at any time. [snowglobe.at](https://snowglobe.at) says more.
+[Snowglobe](https://github.com/OpenMeet-Team/snowglobe) is your own isolated AT Protocol network, for testing and demos. Nothing in it reaches Bluesky's network. We use it to build atmo's groups, and [snowglobe.at](https://snowglobe.at) has the details.
 
 ---
 
@@ -93,7 +82,7 @@ openmeet-platform and openmeet-api keep running for existing groups and still ge
 | **Try what's next** | Try groups on [the demo](https://atmo.lighthouse.snowglobe.at) and tell us what is missing |
 | **Feature ideas** | Tell us on [Discord](https://discord.gg/eQcYADgnrc) what your community needs |
 | **Spread the word** | Share OpenMeet, write about it, tell other organizers |
-| **Funding** | Help cover hosting (~$350/month) at [platform.openmeet.net/support](https://platform.openmeet.net/support) |
+| **Funding** | Help cover hosting (~$200/month) at [platform.openmeet.net/support](https://platform.openmeet.net/support) |
 | **Development** | Work on [snowglobe](https://github.com/OpenMeet-Team/snowglobe), or send pull requests to [atmo](https://github.com/flo-bit/atmo-events) |
 
 **Resources:**
